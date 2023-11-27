@@ -9,9 +9,9 @@ git clone $1 student-submission
 
 if [[ -f "student-submission/ListExamples.java" ]]
 then
-mv student-submission/ListExamples.java grading-area
-mv TestListExamples.java grading-area
-mv lib grading-area
+cpy student-submission/ListExamples.java grading-area
+cpy TestListExamples.java grading-area
+cpy lib grading-area
 echo 'Finished cloning'
 cd grading-area
 javac -cp $CPATH *.java
